@@ -44,8 +44,6 @@ tidy.coxme <- function(
     ret[, exp_cols] <- exp(ret[, exp_cols])
   }
   
-  ret$
-  
   ret
 }
 
