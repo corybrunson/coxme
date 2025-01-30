@@ -2,10 +2,11 @@ useDynLib(coxme, .registration = TRUE)
 import(bdsmatrix, methods, survival)
 importFrom(nlme, ranef, random.effects, fixef, fixed.effects, VarCorr)
 importFrom("stats", anova, as.formula, coef, formula,
-             model.extract, model.matrix, model.offset, predict,
-             model.weights, napredict, naprint, naresid,
+             model.extract, model.frame, model.matrix, model.offset, predict,
+             model.weights, napredict, naprint, naresid, nobs,
              pchisq, rchisq, rnorm, terms, var, printCoefmat)
 import(Matrix) 
+importFrom(generics, glance, tidy, augment)
 export("coxme", "lmekin", "coxme.control", "lmekin.control")
 export("coxmeFull", "coxmeMlist")
 export("expand.nested")
@@ -29,3 +30,6 @@ S3method(VarCorr, coxme)
 S3method(VarCorr, lmekin)
 S3method(vcov, coxme)
 S3method(vcov, lmekin)
+S3method(tidy, coxme)
+S3method(glance, coxme)
+S3method(augment, coxme)

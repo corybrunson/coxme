@@ -3,7 +3,7 @@ Priority: optional
 Package: coxme
 Version: 2.2-22
 Depends: survival (>= 2.36.14), methods, bdsmatrix(>= 1.3), R(>= 2.10)
-Imports: nlme, Matrix (>= 1.0)
+Imports: nlme, Matrix (>= 1.0), generics
 Suggests: mvtnorm, kinship2
 LinkingTo: bdsmatrix
 LazyData: Yes
